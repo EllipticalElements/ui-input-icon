@@ -1,0 +1,11 @@
+{
+  "name": "ui-input-icon",
+  "description": "icon input component",
+  "version": "1.0.0",
+  "author": "S. Francis",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EllipticalElements/ui-input-icon.git"
+  }
+}
