@@ -1,15 +1,41 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../elliptical-polymer-behaviors/component-behavior.html">
 
 
-<ui-input-icon parse-attr definition>
+<dom-module id="ui-input-icon">
     <template>
         <input type="text" placeholder="[[placeholder]]" name="[[name]]" id="[[data-id]]" data-bind="[[bind]]">
     </template>
-</ui-input-icon>
-<script>
-Elliptical(function(){
-    $.element('ui-input-icon',{
+</dom-module>
 
-        _initElement: function(){
+<script>
+
+    Polymer({
+
+        is: 'ui-input-icon',
+
+        behaviors:[Elliptical.ComponentBehavior],
+
+        properties: {
+            placeholder:{
+                type:String,
+                value:''
+            },
+            name:{
+                type:String,
+                value:''
+            },
+            dataId:{
+                type:String,
+                value:''
+            },
+            bind:{
+                type:String,
+                value:null
+            }
+        },
+
+        ready:function(){
             var element=this.element;
             var font=element.attr('font');
             if(!font){
@@ -19,8 +45,8 @@ Elliptical(function(){
         },
 
         _setValueProp:function(){
-           var element=this.element;
-           var node=this.element[0];
+            var element=this.element;
+            var node=this;
             Object.defineProperty(node, 'value', {
                 get: function() { return element.find('input').val(); },
                 set: function(newValue) { element.find('input').val(newValue); },
@@ -30,5 +56,5 @@ Elliptical(function(){
         }
 
     });
-});
+
 </script>
