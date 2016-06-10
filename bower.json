@@ -1,7 +1,7 @@
 {
   "name": "ui-input-icon",
   "description": "icon input web component",
-  "version":"1.1.0",
+  "version":"1.2.0",
   "main": "ui-input-icon.html",
   "authors": [
     "S. Francis"
@@ -41,7 +41,7 @@
     "bk"
   ],
   "dependencies": {
-    "elliptical-polymer-behaviors": "~1.1.0",
+    "elliptical-polymer-behaviors": "~1.2.0",
     "elliptical-sass": "~1.2.1",
     "sass-core-icons": "~1.0.4",
     "sass-content-icons": "~1.0.4",
