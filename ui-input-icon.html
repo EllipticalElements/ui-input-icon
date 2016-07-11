@@ -21,12 +21,16 @@
         },
 
         ready:function(){
+            this._setRole();
             this._setValueProp();
         },
 
-        _setIcon:function(icon){
-            var input=this.element.find('input');
-            input.attr('icon',icon);
+        _setRole:function(){
+            var role=this.getAttribute('role');
+            if(role){
+                var input=this.element.find('input');
+                input.attr('role',role);
+            }
         },
 
         _setValueProp:function(){
