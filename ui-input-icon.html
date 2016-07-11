@@ -4,7 +4,7 @@
 
 <dom-module id="ui-input-icon">
     <template>
-        <input type="text" placeholder="[[placeholder]]" name="[[name]]" id="[[data-id]]" data-bind="[[bind]]">
+        <input type="text" placeholder="[[placeholder]]" name="[[dataName]]" id="[[dataId]]" icon=[[icon]]>
     </template>
 </dom-module>
 
@@ -17,31 +17,16 @@
         behaviors:[Elliptical.ComponentBehavior],
 
         properties: {
-            placeholder:{
-                type:String,
-                value:''
-            },
-            name:{
-                type:String,
-                value:''
-            },
-            dataId:{
-                type:String,
-                value:''
-            },
-            bind:{
-                type:String,
-                value:null
-            }
+
         },
 
         ready:function(){
-            var element=this.element;
-            var font=element.attr('font');
-            if(!font){
-                element.attr('font','elliptical');
-            }
             this._setValueProp();
+        },
+
+        _setIcon:function(icon){
+            var input=this.element.find('input');
+            input.attr('icon',icon);
         },
 
         _setValueProp:function(){

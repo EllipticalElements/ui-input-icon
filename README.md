@@ -1,4 +1,33 @@
-UI-COMPONENT
+UI-INPUT-ICON
 ===========================
 
-element for elliptical and polymer web components
+Icon input element for polymer web components
+
+# Installation
+
+##bower
+
+``` bash
+
+bower install ui-input-icon
+
+```
+
+## Usage
+
+```html
+
+<link rel="import" href="bower_components/ui-input-icon/ui-input-icon.html">
+
+
+```
+
+## Element Attributes
+
+``` bash
+data-id
+data-name
+placeholder
+icon : Html Entity representation, e.g, &#xe609;
+
+```
