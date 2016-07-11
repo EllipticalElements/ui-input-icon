@@ -28,6 +28,7 @@ bower install ui-input-icon
 data-id
 data-name
 placeholder
+role
 icon : Html Entity representation, e.g, &#xe609;
 
 ```
